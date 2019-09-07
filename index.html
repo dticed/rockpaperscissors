@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const opcoes = ["ROCK", "PAPER", "SCISSORS"];
+              
+        function computerPlay(lista) {
+            let item = opcoes[Math.floor(Math.random()*opcoes.length)]
+            return item
+        }
+
+        var computerSelection = computerPlay(opcoes);
+        var playerSelection = prompt();
+
+        function playRound(playerSelection, computerSelection) {
+            
+            if (playerSelection.toUpperCase() === computerSelection.toUpperCase()) {
+                console.log("Tied game!")
+            } else if (playerSelection.toUpperCase() === "Rock".toUpperCase() && computerSelection.toUpperCase() === "Scissors".toUpperCase()) {
+                console.log("You win! Rock beats Scissors")
+            } else if(playerSelection.toUpperCase() === "Rock".toUpperCase() && computerSelection.toUpperCase() === "Paper".toUpperCase()) {
+                console.log("You lose! Paper beats Rock")
+            } else if(playerSelection.toUpperCase() === "Scissors".toUpperCase() && computerSelection.toUpperCase() ===  "Paper".toUpperCase()) {
+                console.log("You win! Scissors beats Paper")
+            } else if(playerSelection.toUpperCase() === "Scissors".toUpperCase() && computerSelection.toUpperCase() === "Rock".toUpperCase()) {
+                console.log("You Lose! Rock beats Scissors")
+            } else if(playerSelection.toUpperCase() === "Paper".toUpperCase() && computerSelection.toUpperCase() === "Rock".toUpperCase()) {
+                console.log("You win! Paper beats Rock")
+            } else if(playerSelection.toUpperCase() === "Paper".toUpperCase() && computerSelection.toUpperCase() === "Scissors".toUpperCase()) {
+                console.log("You lose! Scissors beats Paper")
+            }
+        }
+
+        function game() {
+            
+        }
+
+    </script>
+</body>
+</html>
